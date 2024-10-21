@@ -19,6 +19,18 @@ cin >> numero;
 int potencia = numero * numero; // Calcula la potencia al cuadrado
 cout << "La potencia de " << numero << " es " << potencia << endl;
 
-// Ejercicio 3
-int yardas;
-cout << "ingrese numero de yardas: ";
+
+	// Ejercicio 3
+	double yardas;
+	cout << "ingrese numero de yardas: ";
+	cin >> yardas;
+	double metros = yardas * 0.9144;
+	cout <<"Las yardas son: " << metros << " metros" << endl;
+
+	// Ejercicio 4
+	int precioAuto = 200000;
+	double depreciacionAño = 32000;
+	int depreciacion = precioAuto - depreciacionAño;
+	cout << "Cada año se deprecia: " << endl;
+
+}
