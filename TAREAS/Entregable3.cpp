@@ -77,9 +77,102 @@ cin >> numero4;
 
 if (numero4 > 100)
 {
-    cout << "El numero " << numero << "es mayor a 100 " << endl;
+    cout << "El numero " << numero4 << "es mayor a 100 " << endl;
 }
 else
 {
-    cout << "El numero: " << numero << " es menor o igual a 100" << endl;
+    cout << "El numero: " << numero4 << " es menor o igual a 100" << endl;
 }
+
+
+// Ejercicio 7  Escriba el código que solicite un número al usuario si este número es menor a cero
+// entonces imprima que “el número es negativo”, de lo contrario imprimir el “número es
+// positivo”
+int numero5;
+cout << "Ingrese un numero: ";
+cin >> numero5;
+if (numero5 < 0)
+{
+    cout << "El numero es negativo" << endl;
+}
+else
+{
+    cout << "El numero es positivo" << endl;
+}
+
+// Ejercicio 8 Escriba un programa que pregunte por el mail del usuario y guardarlo en una variable
+// llamada “Miemail”, y luego que pregunte por un password y se guarde en una variable
+//llamada “Password_Ingresado”, validar si el password es igual a “12345” entonces
+//imprimir “Felicidades password correcto” de otra manera imprimir “Su password es
+//incorrecto”
+string miemail;
+int pasword;
+
+cout << "Escribe tu correo: ";
+cin >> miemail;
+
+cout << "Escribe tu contrasena: ";
+cin >> pasword;
+if (pasword == 12345)
+{
+    cout << "Felicidades password correcto" << endl;
+}
+else
+{
+    cout << "Su password es incorrecto" << endl;
+}
+
+// Ejercicio 9 Crear un código que convierta de grados farenheit a grados centígrados, usando una
+// variable llamada Farenheith; basado en la siguiente formula :
+// (Farenheit − 32) ∗ (5 / 9)
+int farenheit;
+int centigrados;
+cout << "Escribe grados en farenheit: ";
+cin >> farenheit;
+
+cout << "a centigrados es: " << (farenheit - 32) * (5 / 9) << endl;
+
+
+// Ejercicio 10
+double pesoCorporal, estatura;
+double mc;
+
+cout << "Ingresa tu peso corporal: ";                          
+cin >> pesoCorporal;
+cout << endl;
+
+cout << "Ingresa tu estatura: ";
+cin >> estatura;
+cout << endl;
+
+mc = pesoCorporal / (estatura * estatura);
+cout << "Mc es: " << mc << endl;
+
+if (mc < 18.5)
+{
+    cout << "Tu peso es bajo" << endl;
+}
+if (mc >= 18.5 and mc < 25)
+{
+    cout << "Tu peso es normal" << endl;
+}
+if (mc >= 25 and mc < 30)
+{
+    cout << "Tienes sobrepeso" << endl;
+}
+if (mc >= 30 and mc < 35)
+{
+    cout << "Tienes obesidad clase 1" << endl;
+}
+if (mc >= 35 and mc < 40)
+{
+    cout << "Tienes obesidad clase 2" << endl;
+}
+if (mc >= 40)
+{
+    cout << "Tienes obesidad clase 3" << endl;
+
+    // cout << fixed;  funcion que permite mas precision para imprimir el numero
+    // cout << setprecision(2); funcion para lo mismo 
+}
+
