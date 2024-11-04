@@ -4,49 +4,47 @@
     //más grande.
 
     int A, B, C;
-    A = 20;
-    B = 70;
-    C = 40;
+A = 20;
+B = 70;
+C = 40;
 
-    if (B > A)
-    {
-        cout << "B:" << B << endl;
-    }
+if (B >= A and B >= C)
+{
+    cout << "B es mas grande " << B << endl;
+}
 
-    if (C > B)
-    {
-        cout << "C:" << C << endl;
-    }
+if (C >= A and C >= B)
+{
+    cout << "C es mas grande " << C << endl;
+}
 
-    if (A > B)
-    {
-        cout << "A:" << A << endl;
-    }
+if (A >= B and A >= C)
+{
+    cout << "A es mas grande " << A << endl;
+}
+
 
     //2. Crear un programa que lea tres números diferentes, A, B, C, e imprime los valores
     //máximo y mínimo.El procedimiento consistirá en comparaciones sucesivas de parejas de
     // números.Cree el algoritmo, diagrama de flujo y código en C#
 
-    int A1, B1, C1;
+    A, B, C;
 
-    A1 = 3;
-    B1 = 2;
-    C1 = 6;
 
-    if (A1 < B1)
-    {
-        cout << "A1: " << A1 << endl;
-    }
+if (A <= B and A <= C)
+{
+    cout << "A es mas chico " << A << endl;
+}
 
-    if (B1 < A1)
-    {
-        cout << "B1: " << B1 << endl;
-    }
+if (B <= A and B <= C)
+{
+    cout << "B es mas chico " << B << endl;
+}
 
-    if (C1 > A1)
-    {
-        cout << "C1: " << C1 << endl;
-    }
+if (C <= A and C <= B)
+{
+    cout << "C es mas chico " << C << endl;
+}
        
 
     // 3. Crear un programa al que le solicitemos la hora HH, MM, SS y nos calcule la hora
