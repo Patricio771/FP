@@ -148,7 +148,29 @@ if (C <= A and C <= B)
         cout << "Por debajo del punto de ebullicion del agua" << endl;
     }
 
-    // C)
+    // C) 
+int numero;
+int sumaPositivos = 0;
+int sumaNegativos = 0;
+cout << "dame un numero: ";
+cin >> numero;
+
+if (numero != 0)
+{
+	
+	if (numero > 0)
+	{
+		sumaPositivos += numero;
+		cout << "El numero es positivo: " << sumaPositivos << endl;
+	}
+
+	else if (numero < 0)
+	{
+		sumaNegativos += numero;
+		cout << "El numero es negativo: " << sumaNegativos << endl;
+	}
+}
+ 
 
     if (distancia2 > 20 and distancia2 < 35) 
     {
