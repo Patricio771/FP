@@ -149,7 +149,6 @@ if (C <= A and C <= B)
     }
 
     // C) 
-int numero;
 int sumaPositivos = 0;
 int sumaNegativos = 0;
 cout << "dame un numero: ";
@@ -157,24 +156,57 @@ cin >> numero;
 
 if (numero != 0)
 {
-	
+
 	if (numero > 0)
 	{
 		sumaPositivos += numero;
 		cout << "El numero es positivo: " << sumaPositivos << endl;
+		cout << "Hay: " << sumaPositivos << endl;
 	}
 
 	else if (numero < 0)
 	{
 		sumaNegativos += numero;
 		cout << "El numero es negativo: " << sumaNegativos << endl;
+		cout << "Hay: " << sumaNegativos << endl;
 	}
 }
  
+ // D) 
+ cout << "Dame un valor para x:";
+ cin >> x;
 
-    if (distancia2 > 20 and distancia2 < 35) 
-    {
-        int tiempo; 
-        cout << "El tiempo es: ";
-        cin >> tiempo;
-    }
+
+ cout << "Dame un valor para y: ";
+ cin >> y;
+
+
+ cout << "Dame un valor para z:";
+ cin >> z;
+
+ if (x > y and z < y)
+ {
+     cout << x;
+ }
+  
+ else
+ {
+     cout << "No se cumple lo anterior";
+ }
+
+	 // E)
+cout << "Ingresa un valor para la distancia: ";
+cin >> distancia2;
+cout << endl;
+
+if (distancia2 > 20 and distancia2 < 35)
+{
+    int tiempo;
+    cout << "Ingrese el valor de tiempo: ";
+    cin >> tiempo;
+    cout << "El valor del tiempo es: " << tiempo << endl;
+}
+else
+{
+    cout << "El valor para distancia no esta en el rango. ";
+}
