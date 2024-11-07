@@ -175,3 +175,55 @@ string opcion;
     {
         cout << "Pin incorrecto" << endl;
     }
+
+
+
+// 4. Hacer un programa que “simule” “Temple Run” donde el corredor iniciara siempre
+//corriendo hacia adelante es decir dirección “adelante”, la dirección tiene otros dos
+//posibles valores “izquierda” y “derecha”.
+//La pista es una pista sin fin, con un tiempo inicial limitado a 12 unidades; la vida y el
+//tiempo son uno solo concepto, cuando el tiempo se acaba, entonces, el juego también.
+//Se tienen dos modificadores del corredor, uno es un castigo, el otro es un premio, estos
+//son totalmente aleatorios.
+//En el caso de encontrar un obstáculo, este es generado de manera aleatoria con dos
+//valores posibles, Verdadero (“True”) o Falso (“False), En este caso Verdadero que
+//representa el castigo, entonces se restará 3 unidades de tiempo al corredor, en caso
+//contrario o Falso, solo se restará una unidad.
+//Para premiar a nuestro corredor, podrá encontrar un premio o tiempo extra de manera
+//aleatoria con dos valores posibles, Verdadero (“True”) o Falso (“False), En este caso
+//Verdadero que representa el premio, entonces se sumará 3 unidades de tiempo al
+//corredor, en caso contrario o Falso, solo se sumará una unidad.
+//El corredor podrá salir de la aplicación presionando la tecla escape en cualquier momento.
+//El corredor podrá continuar jugando mientras tenga distancia disponible para jugar, si la
+//distancia alcanza 0 o un número negativo, el juego terminará.
+
+	srand(time(NULL));   //Generar semilla.
+	int castigo = 0, i = 0;
+	int vida = 12;
+	int premio = 0;
+	cout << "Vida inicial " << vida << endl;
+	while (vida > 0)
+	{
+		// deducir uno vida
+		vida--;      
+		cout << "Costo de ciclo " << vida << endl;
+
+		// castigo?
+		castigo = rand() % 2;
+		if (castigo == 1)
+		{
+			vida = vida - 3;
+			cout << "Castigo " << vida << endl;
+		}
+		      
+		premio = rand() % 2;
+		if (premio == 1)
+		{
+			vida = vida + 3;
+			cout << "Premio " << vida << endl;
+		}
+		cout << "Vida despues de ciclo " << vida << endl;
+
+
+
+	}
