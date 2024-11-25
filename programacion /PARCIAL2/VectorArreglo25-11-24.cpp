@@ -18,6 +18,7 @@ while (num != 0)
         cout << elemento << endl;
     }
 
+//mayor y menor elemento, (para sacar menor se cambia a "<" en el for
 int numeros[10]
 {34, 23, 94, 56, 16, 27, 5, 25, 42, 82 };
 
