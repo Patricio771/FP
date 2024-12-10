@@ -1,0 +1,904 @@
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main()
+        {
+
+            // Ejercicio 1: Realiza un código que ejecute las siguientes operaciones e imprima los resultados de ejecutar cada operación usando la instrucción cin
+            double Resultado1 = 3 + 5 * 2 / 2 - 1;
+            double Resultado2 = 3 + 10 / 2 - 1;
+            double Resultado3 = 3 + 5 - 1;
+            double Resultado4 = 8 - 1;
+            double Resultado5 = 1 / 3 * 3;
+
+            Console.WriteLine("Resultado de 3 + 5 * 2 / 2 - 1: " + Resultado1);
+            Console.WriteLine("Resultado de 3 + 10 / 2 - 1: " + Resultado2);
+            Console.WriteLine("Resultado de 3 + 5 - 1: " + Resultado3);
+            Console.WriteLine("Resultado de 8 - 1: " + Resultado4);
+            Console.WriteLine("Resultado de 1/3 * 3: " + Resultado5);
+
+            // Ejercicio 2: Escriba el código que pregunte al usuario por un número y escribir el resultado de la potencia del número.De la siguiente manera :
+            Console.Write("Ingresa un numero: ");
+            int numero1 = int.Parse(Console.ReadLine());
+
+            int potencia = numero1 * numero1; // Calcula la potencia al cuadrado
+            Console.WriteLine("La potencia de " + numero1 + " es " + potencia);
+
+
+            // Ejercicio 3: Escriba un programa que pregunte al usuario por el número de yardas a convertir en metros.Recuerde que la unidad de conversión de
+            // una yarda equivale a 0.9144 metros.
+            Console.Write("ingrese numero de yardas: ");
+            double yardas = double.Parse(Console.ReadLine());
+            Console.WriteLine("Las yardas ingresadas son: " + yardas);
+            double metros = yardas * 0.9144;
+            Console.WriteLine("Las yardas son: " + metros + " metros");
+
+
+            // Ejercicio 4: Escriba el código de un programa que pregunte que calcule la depreciación de un auto con valor de 200, 000 pesos donde se depreciará
+            // por cinco años, considerando que solo se puede depreciar el 80 % del valor original pagado por el vehículo.Imprima en consola el valor de deducción por cada año.
+            const double valorOriginal = 200000;
+            const double porcentajeDepreciacion = 0.8; // 80% del valor original
+            const int anos = 5;
+
+            double valorDepreciado = valorOriginal * porcentajeDepreciacion;
+            double deduccionAnual = valorDepreciado / anos;
+
+            Console.WriteLine("El valor del auto se deprecia: " + valorDepreciado + " en cinco anos");
+            Console.WriteLine("El valor del auto se deprecia: " + deduccionAnual + " por ano");
+
+
+
+            // Ejercicio 5: Escriba un cálculo que calcule el porcentaje de deducción de impuestos del salario mensual de 25, 000 pesos, donde este se deducirá un impuesto fijo de
+            // 900 pesos, más una parte porcentual de 1.5 % sobre el cálculo de sueldo mensual – 900, Imprima el valor total del impuesto a deducir, y el sueldo neto que recibirá 
+            // el empleado.
+
+            const double salarioMensual = 25000;
+            const double impuesto = 900;
+            const double partePorcentual = 375;  //el 1.5% de 25000
+
+            double porcentajeSalarioreducido = salarioMensual - impuesto - partePorcentual;
+            Console.WriteLine("El salario neto es: " + porcentajeSalarioreducido);
+
+
+            // Ejercicio 6: Escriba el código de cada una de las siguientes operaciones en C++; por favor cree una
+            //variable con el nombre de su elección e imprima el resultado con la instrucción cout: 1) 3*4 2) 12 / 3 3) 12 % 3
+
+            int primerEjercicio = 3 * 4;
+            int segundoEjercicio = 12 / 3;
+            double tercerEjercicio = 12 * 0.03;
+            double cuartoResultado = 12 * 0.07;
+            double quintoResultado = 3 + 3.0;
+            double sextoResultado = 10 / 100;
+            double septimoResultado = Math.Pow(2, 3);
+
+            Console.WriteLine("El primer resultado es: " + primerEjercicio);
+            Console.WriteLine("El segundo resultado es: " + segundoEjercicio);
+            Console.WriteLine("El tercer resultado es: " + tercerEjercicio);
+            Console.WriteLine("El cuarto resultado es: " + cuartoResultado);
+            Console.WriteLine("El quinto resultado es: " + quintoResultado);
+            Console.WriteLine("El sexto resultado es: " + sextoResultado);
+            Console.WriteLine("El septimo resultado es: " + septimoResultado);
+
+
+
+
+
+            //Ejercicio 7: Comparaciones. Cuál será el resultado de cada comparación y escriba el código e imprima los
+            // resultados usando la instrucción cout, NOTA: Las comparaciones encierrelasentre paréntesis.
+            // Si a = 10 y b = 20
+
+            int a = 10;
+            int b = 20;
+            Console.WriteLine();
+
+            if (a > b)
+            {
+                Console.WriteLine("a es mas grande ");
+            }
+            else
+            {
+                Console.WriteLine("b es mas grande ");
+            }
+
+
+            if (a < b)
+            {
+                Console.WriteLine("a es mas chico ");
+            }
+            else
+            {
+                Console.WriteLine("b es mas chico ");
+            }
+
+
+            if (a == b)
+            {
+                Console.WriteLine("a es igual a b ");
+            }
+            else
+            {
+                Console.WriteLine("a no es igual a b ");
+            }
+
+
+            if (a != b)
+            {
+                Console.WriteLine("a es diferente a b ");
+            }
+            else
+            {
+                Console.WriteLine("a no es diferente a b ");
+            }
+
+
+            if (a + b > 100)
+            {
+                Console.WriteLine("a sumado b es mayor que 100 ");
+            }
+            else
+            {
+                Console.WriteLine("a sumado b no es mayor que 100 ");
+            }
+
+
+            if (a - b == 0)
+            {
+                Console.WriteLine("a menos b es igual a 0 ");
+            }
+            else
+            {
+                Console.WriteLine("a menos b no es igual a 0 ");
+            }
+
+
+            if (a * b > 500)
+            {
+                Console.WriteLine("a por b es mayor que 500 ");
+            }
+            else
+            {
+                Console.WriteLine("a por b no es mayor que 500 ");
+            }
+
+
+            if (a * b < 100)
+            {
+                Console.WriteLine("a por b es menor que 100 ");
+            }
+            else
+            {
+                Console.WriteLine("a por b es mayor que 100 ");
+            }
+
+
+            if (a - b < 0)
+            {
+                Console.WriteLine("a menos b es menor que 0 ");
+            }
+            else
+            {
+                Console.WriteLine("a menos b es mayor que 0 ");
+            }
+
+
+            if (a < 20)
+            {
+                Console.WriteLine("a es menor que 20 ");
+            }
+            else
+            {
+                Console.WriteLine("a es mayor que 20 ");
+            }
+
+
+
+            //Practica C
+
+            // Ejercicio 1 Escriba el código que pregunte al usuario por un número y escribir el resultado del
+            // cuadrado.De la siguiente manera: Ingrese un número: 5, El cuadrado de 5 es 25
+            int numero2;
+            Console.WriteLine("Ingrese un numero ");
+            numero2 = int.Parse(Console.ReadLine());
+
+            int potenciaa = numero2 * numero2;
+            Console.WriteLine("El cuadrado de " + numero2 + " es " + potenciaa);
+
+
+
+
+            // Ejercicio 2 Escriba un código que solicite un número entero e imprima los resultados de x, 2x, 3x,
+            // 4x y 5x.Donde x es el número ingresado por el usuario, y los subsecuentes implican
+            // multiplicar por 2, multiplicar por 3, multiplicar por 4 y multiplicar por 5, y escribir el
+            // resultado en el siguiente formato :
+            // Ingrese un número : 7
+            // 7 -- 14 -- 21 -- 28 -- 35
+            int x;
+            Console.WriteLine("Ingrese un numero ");
+            x = int.Parse(Console.ReadLine());
+            Console.WriteLine(x * 2 + " - " + x * 3 + " - " + x * 4 + " - " + x * 5);
+
+
+
+            // Ejercicio 3 Escriba un programa que pregunte al usuario por su peso y en kilogramos y lo
+            // convierta en libras, el factor de conversión es 2.2 libras por un kilo.
+            int peso;
+            Console.WriteLine("Ingrese su peso en kilogramos: ");
+            peso = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Su peso en libras es: " + peso * 2.2);
+
+
+
+
+            // Ejercicio 4 Escriba el código de un programa que pregunte por 3 números (use 3 instrucciones de
+            // entrada).Cree las tres variables de entrada, adicionalmente cree una variable que se
+            // llame Total y Promedio, donde Total contendrá la suma de las tres variables y Promedio
+            // que será el cálculo del promedio de los 3 números.
+            int numero3;
+            int numero4;
+            int numero5;
+            int promedio, total;
+
+            Console.WriteLine("Ingresa 3 valores: ");
+            numero3 = int.Parse(Console.ReadLine());
+            numero4 = int.Parse(Console.ReadLine());
+            numero5 = int.Parse(Console.ReadLine());
+
+            total = numero3 + numero4 + numero5;
+            promedio = total / 3;
+
+            Console.WriteLine("El total es: " + total + " Y tu promedio es: " + promedio);
+
+
+
+
+            // Ejercicio 5  Escriba un cálculo que calcule la propina de un Total, donde le pregunte al usuario por
+            // el total de la cuenta, y el porcentaje de propina a aplicar y guardarlo en una variable que
+            // se llame Porcentaje y como resultado imprima la cantidad a dar de propina.
+            double total2;
+            double porcentaje;
+            double propina;
+
+            Console.WriteLine("Ingresa el total de la cuenta: ");
+            total2 = double.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("Que porcentaje de propina desea dar? ");
+            porcentaje = double.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            propina = total2 * (porcentaje / 100);
+            Console.WriteLine("La propina es: " + propina);
+
+
+
+
+
+            // Ejercicio 6 Escriba el código que solicite un número al usuario y si este número es mayor a 100,
+            // que imprima “El número es mayor a 100”, de lo contrario que imprima “El número es
+            // menor o igual que 100”
+            int numero6;
+            Console.WriteLine("Ingresa un numero: ");
+            numero6 = int.Parse(Console.ReadLine());
+
+            if (numero6 > 100)
+            {
+                Console.WriteLine("El numero " + numero6 + "es mayor a 100 ");
+            }
+            else
+            {
+                Console.WriteLine("El numero: " + numero6 + " es menor o igual a 100");
+            }
+
+
+
+
+
+            // Ejercicio 7  Escriba el código que solicite un número al usuario si este número es menor a cero
+            // entonces imprima que “el número es negativo”, de lo contrario imprimir el “número es
+            // positivo”
+            int numero7;
+            Console.WriteLine("Ingrese un numero: ");
+            numero7 = int.Parse(Console.ReadLine());
+            if (numero7 < 0)
+            {
+                Console.WriteLine("El numero es negativo");
+            }
+            else
+            {
+                Console.WriteLine("El numero es positivo");
+            }
+
+
+
+
+            // Ejercicio 8 Escriba un programa que pregunte por el mail del usuario y guardarlo en una variable
+            // llamada “Miemail”, y luego que pregunte por un password y se guarde en una variable
+            //llamada “Password_Ingresado”, validar si el password es igual a “12345” entonces
+            //imprimir “Felicidades password correcto” de otra manera imprimir “Su password es
+            //incorrecto”
+            string miemail;
+            int pasword;
+
+
+            Console.WriteLine("Escribe tu correo: ");
+            miemail = Console.ReadLine();
+
+            Console.WriteLine("Escribe tu contrasena: ");
+            pasword = int.Parse(Console.ReadLine());
+            if (pasword == 12345)
+            {
+                Console.WriteLine("Felicidades password correcto");
+            }
+            else
+            {
+                Console.WriteLine("Su password es incorrecto");
+            }
+
+
+
+
+            // Ejercicio 9 Crear un código que convierta de grados farenheit a grados centígrados, usando una
+            // variable llamada Farenheith; basado en la siguiente formula :
+            // (Farenheit − 32) ∗ (5 / 9)
+            int farenheit;
+            Console.WriteLine("Escribe grados en farenheit: ");
+            farenheit = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("a centigrados es: " + (farenheit - 32) * (5 / 9));
+
+
+            // Ejercicio 10
+            double pesoCorporal, estatura;
+            double mc;
+
+            Console.WriteLine("Ingresa tu peso corporal: ");
+            pesoCorporal = double.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("Ingresa tu estatura: ");
+            estatura = double.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            mc = pesoCorporal / (estatura * estatura);
+            Console.WriteLine("Mc es: " + mc);
+
+            if (mc < 18.5)
+            {
+                Console.WriteLine("Tu peso es bajo");
+            }
+            if (mc >= 18.5 && mc < 25)
+            {
+                Console.WriteLine("Tu peso es normal");
+            }
+            if (mc >= 25 && mc < 30)
+            {
+                Console.WriteLine("Tienes sobrepeso");
+            }
+            if (mc >= 30 && mc < 35)
+            {
+                Console.WriteLine("Tienes obesidad clase 1");
+            }
+            if (mc >= 35 && mc < 40)
+            {
+                Console.WriteLine("Tienes obesidad clase 2");
+            }
+            if (mc >= 40)
+            {
+                Console.WriteLine("Tienes obesidad clase 3");
+
+                // cout << fixed;  funcion que permite mas precision para imprimir el numero
+                // cout << setprecision(2); funcion para lo mismo 
+            }
+
+
+
+            //Practica D
+
+            //1.  Diseñar un programa que lea tres números A, B, C y visualice en pantalla el valor del
+            //más grande.
+
+            int A, B, C;
+            A = 20;
+            B = 70;
+            C = 40;
+
+            if (B >= A && B >= C)
+            {
+                Console.WriteLine("B es mas grande " + B);
+            }
+
+            if (C >= A && C >= B)
+            {
+                Console.WriteLine("C es mas grande " + C);
+            }
+
+            if (A >= B && A >= C)
+            {
+                Console.WriteLine("A es mas grande " + A);
+            }
+
+
+
+
+
+
+            //2. Crear un programa que lea tres números diferentes, A, B, C, e imprime los valores
+            //máximo y mínimo.El procedimiento consistirá en comparaciones sucesivas de parejas de
+            // números.Cree el algoritmo, diagrama de flujo y código en C#
+
+            int A1, B1, C1;
+            A1 = 20;
+            B1 = 70;
+            C1 = 40;
+
+
+            if (A1 <= B1 && A1 <= C1)
+            {
+
+                Console.WriteLine("A es mas chico " + A1);
+            }
+
+            if (B1 <= A1 && B1 <= C1)
+            {
+
+                Console.WriteLine("B es mas chico " + B1);
+            }
+
+            if (C1 <= A1 && C1 <= B1)
+            {
+
+                Console.WriteLine("C es mas chico " + C1);
+            }
+
+
+
+
+
+
+            // 3. Crear un programa al que le solicitemos la hora HH, MM, SS y nos calcule la hora
+            //dentro de un segundo más tarde.Leeremos las horas minutos y segundos como números
+            // enteros.
+
+            int horas, minutos, segundos;
+            Console.WriteLine("Introduce hora, minutos y segundos: ");
+            horas = int.Parse(Console.ReadLine());
+            minutos = int.Parse(Console.ReadLine());
+            segundos = int.Parse(Console.ReadLine());
+
+            segundos = segundos + 1;
+
+            if (segundos == 60)
+            {
+                segundos = 0;
+                minutos = minutos + 1;
+            }
+
+            if (minutos == 60)
+            {
+                minutos = 0;
+                horas = horas + 1;
+            }
+
+            if (horas == 24)
+            {
+                horas = 0;
+            }
+
+            Console.WriteLine("Hora: " + horas + " " + minutos + " " + segundos);
+
+
+
+
+
+
+            //4. Determinar el precio del boleto de ida y vuelta en avión, conociendo la distancia a
+            //recorrer y sabiendo que si el número de días de estancia es superior a 7 y la distancia
+            //superior a 800 km el billete tiene una reducción del 30 % .El precio por km es de 2.5
+            //dólares.
+
+            double boleto;
+            double distancia;
+            int dias;
+
+            Console.WriteLine("Cuantos dias vas a estar: ");
+            dias = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("Distancia en km: ");
+            distancia = double.Parse(Console.ReadLine());
+
+            if (dias > 7 && distancia > 800)
+            {
+                boleto = (distancia * 2.5) * 0.30;
+                Console.WriteLine("El boleto cuesta: " + boleto);
+            }
+
+            else
+            {
+                boleto = distancia * 2.5;
+                Console.WriteLine("El boleto cuesta: " + boleto);
+            }
+
+
+
+
+            //5. Escribir las instrucciones apropiadas para cada una de las siguientes condiciones:
+            //a) Si un ángulo es igual a 90 grados, imprimir el mensaje "El ángulo es un ángulo
+            //recto" sino imprimir el mensaje "El ángulo no es un ángulo recto".
+            // b) Si la temperatura es superior a 100 grados, visualizar el mensaje “por encima
+            // del punto de ebullición del agua” sino visualizar el mensaje “por debajo del
+            // punto de ebullición del agua”.
+            // c) Recibir un número, Si este número es positivo, sumar el número a total de
+            // positivos usando una variable que acumule los números negativos, sino sumar al
+            // total de negativos usando una variable que acumule los números negativos.
+            // d) Si “x” es mayor que “y”, y “z” es menor que “y”, imprimir “x”.
+            // e) Si la distancia es mayor que 20 y menos que 35, crear y leer un valor para luna
+            // variable de tipo entero llamada “tiempo”.
+
+            int angulo;
+            int temperatura;
+            int numero8;
+            int x1, y, z;
+            int distancia2;
+
+            // A)
+            Console.WriteLine("Ingrese un angulo: ");
+            angulo = int.Parse(Console.ReadLine());
+
+            if (angulo == 90)
+            {
+                Console.WriteLine("El angulo es recto");
+            }
+            else
+            {
+                Console.WriteLine(" El angulo no es recto");
+            }
+
+            // B)
+            Console.WriteLine("Dame la temperatura: ");
+            temperatura = int.Parse(Console.ReadLine());
+
+            if (temperatura > 100)
+            {
+                Console.WriteLine("Por encima del punto ebullición del agua");
+            }
+            else
+            {
+                Console.WriteLine("Por debajo del punto de ebullicion del agua");
+            }
+
+            // C) 
+            int sumaPositivos = 0;
+            int sumaNegativos = 0;
+            Console.WriteLine("dame un numero: ");
+            numero8 = int.Parse(Console.ReadLine());
+
+            if (numero8 != 0)
+            {
+
+                if (numero8 > 0)
+                {
+                    sumaPositivos += numero8;
+                    Console.WriteLine("El numero es positivo: " + sumaPositivos);
+                    Console.WriteLine("Hay: " + sumaPositivos);
+                }
+
+                else if (numero8 < 0)
+                {
+                    sumaNegativos += numero8;
+                    Console.WriteLine("El numero es negativo: " + sumaNegativos);
+                    Console.WriteLine("Hay: " + sumaNegativos);
+                }
+            }
+
+            // D) 
+            Console.WriteLine("Dame un valor para x:");
+            x1 = int.Parse(Console.ReadLine());
+
+
+            Console.WriteLine("Dame un valor para y: ");
+            y = int.Parse(Console.ReadLine());
+
+
+            Console.WriteLine("Dame un valor para z:");
+            z = int.Parse(Console.ReadLine());
+
+            if (x1 > y && z<y)
+            {
+              Console.WriteLine(x1);
+            }
+
+            else
+            {
+                Console.WriteLine("No se cumple lo anterior");
+                Console.WriteLine();
+            }
+
+            // E)
+            Console.WriteLine("Ingresa un valor para la distancia: ");
+            distancia2 = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            if (distancia2 > 20 && distancia2< 35)
+            {
+                int tiempo;
+                Console.WriteLine("Ingrese el valor de tiempo: ");
+                tiempo = int.Parse(Console.ReadLine());
+                Console.WriteLine("El valor del tiempo es: " + tiempo);
+            }
+            else
+            {
+                Console.WriteLine("El valor para distancia no esta en el rango. ");
+            }
+
+
+            //Practica E
+
+           
+        
+            // 1. Crear el código de un programa que pregunte si quiere salir del ciclo usando "do...while"
+            string opcion1;
+            do
+            {
+                Console.WriteLine("Desea salir del ciclo?");
+                Console.WriteLine("SI/NO, conteste en mayúsculas.");
+                opcion1 = Console.ReadLine();
+            } while (opcion1 == "NO");
+
+            // 2. Hacer un menú de opciones que ejecute las operaciones aritméticas básicas
+            int numero9, numero10, total3;
+            char opcion;
+
+            do
+            {
+                Console.WriteLine("Menú de operaciones:");
+                Console.WriteLine("a) Suma de dos operadores");
+                Console.WriteLine("b) Resta de dos operadores");
+                Console.WriteLine("c) Multiplicación de dos operadores");
+                Console.WriteLine("d) División de dos operadores");
+                Console.WriteLine("e) Residuo de dos operadores");
+                Console.WriteLine("s) Salir del Menú");
+
+                Console.WriteLine("Ingresa la opción:");
+                opcion = char.Parse(Console.ReadLine());
+
+                if (opcion != 's')
+                {
+                    Console.WriteLine("Dame un número:");
+                    numero9 = int.Parse(Console.ReadLine());
+
+                    Console.WriteLine("Dame otro número:");
+                    numero10 = int.Parse(Console.ReadLine());
+
+                    switch (opcion)
+                    {
+                        case 'a':
+                            total3 = numero9 + numero10;
+                            Console.WriteLine("Resultado: " + total3);
+                            break;
+                        case 'b':
+                            total3 = numero9 - numero10;
+                            Console.WriteLine("Resultado: " + total3);
+                            break;
+                        case 'c':
+                            total3 = numero9 * numero10;
+                            Console.WriteLine("Resultado: " + total3);
+                            break;
+                        case 'd':
+                            if (numero10 != 0)
+                            {
+                                total3 = numero9 / numero10;
+                                Console.WriteLine("Resultado: " + total3);
+                            }
+                            else
+                            {
+                                Console.WriteLine("División por cero no permitida.");
+                            }
+                            break;
+                        case 'e':
+                            total3 = numero9 % numero10;
+                            Console.WriteLine("Resultado: " + total3);
+                            break;
+                        default:
+                            Console.WriteLine("Opción no válida.");
+                            break;
+                    }
+
+                    numero9 = 0;
+                    numero10 = 0;
+                    total3 = 0;
+                }
+
+            } while (opcion != 's');
+
+            // 3. Crear un programa que simule dos operaciones básicas de un cajero
+            string operador;
+            int pin;
+            double saldo = 3450.00;
+            double retirar;
+
+            Console.WriteLine("Ingrese el pin:");
+            pin = int.Parse(Console.ReadLine());
+
+            if (pin == 1234)
+            {
+                do
+                {
+                    Console.WriteLine("Menú de operaciones cajero:");
+                    Console.WriteLine("a) Consulta de saldo");
+                    Console.WriteLine("b) Retiro de dinero");
+                    Console.WriteLine("c) Cancelar operación");
+                    operador = Console.ReadLine();
+
+                    if (operador == "a")
+                    {
+                        Console.WriteLine("Tu saldo es: " + saldo);
+                    }
+                    else if (operador == "b")
+                    {
+                        Console.WriteLine("Cantidad a retirar:");
+                        retirar = double.Parse(Console.ReadLine());
+
+                        if (saldo < retirar)
+                        {
+                            Console.WriteLine("Saldo insuficiente");
+                        }
+                        else
+                        {
+                            saldo -= retirar;
+                            Console.WriteLine("Tu nuevo saldo es: " + saldo);
+                        }
+                    }
+
+                } while (operador != "c");
+            }
+            else
+            {
+                Console.WriteLine("Pin incorrecto");
+            }
+
+            // 4. Simular un juego "Temple Run"
+            Random rnd = new Random();
+            int vida = 12;
+
+            Console.WriteLine("Vida inicial: " + vida);
+
+            while (vida > 0)
+            {
+                // deducir una vida
+                vida--;
+                Console.WriteLine("Costo de ciclo: " + vida);
+
+                // castigo
+                if (rnd.Next(0, 2) == 1)
+                {
+                    vida -= 3;
+                    Console.WriteLine("Castigo: " + vida);
+                }
+
+                // premio
+                if (rnd.Next(0, 2) == 1)
+                {
+                    vida += 3;
+                    Console.WriteLine("Premio: " + vida);
+                }
+
+                Console.WriteLine("Vida después del ciclo: " + vida);
+            }
+
+
+
+
+            //Practica F
+
+            
+                // Ejercicio 1: Secuencia de los números naturales de 0 a 9
+                for (int i = 0; i <= 9; i++)
+                {
+                    Console.Write(i + " , ");
+                }
+                Console.WriteLine();
+
+                // Ejemplo regresivo
+                for (int i = 9; i >= 0; i--)
+                {
+                    Console.Write(i + " , ");
+                }
+                Console.WriteLine();
+
+                // Ejercicio 2: Contar los números de cero a 99
+                for (int i = 1; i <= 99; i++)
+                {
+                    Console.Write(i + " , ");
+                }
+                Console.WriteLine();
+
+                // Ejercicio 3: Contar los números del uno al cien, pero solo imprimir los números pares
+                for (int i = 1; i <= 100; i++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        Console.Write(i + " , ");
+                    }
+                }
+                Console.WriteLine();
+
+                // Ejercicio 4: Imprimir números de manera secuencial según un rango
+                int min, max;
+                Console.WriteLine("Ingrese el valor mínimo:");
+                min = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Ingrese el valor máximo:");
+                max = int.Parse(Console.ReadLine());
+
+                for (int i = min; i <= max; i++)
+                {
+                    Console.Write(i + " , ");
+                }
+                Console.WriteLine();
+
+                // Ejercicio 5: Imprimir números de manera secuencial regresiva según un rango
+                int min1, max1;
+                Console.WriteLine("Ingrese el valor mínimo:");
+                min1 = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Ingrese el valor máximo:");
+                max1 = int.Parse(Console.ReadLine());
+
+                for (int i = max1; i >= min1; i--)
+                {
+                    Console.Write(i + " , ");
+                }
+                Console.WriteLine();
+
+
+            //Practica G
+          
+                // 1. Arreglo con los nombres de los meses del año
+                string[] nomMeses = { "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre" };
+
+                for (int i = 0; i < nomMeses.Length; i++)
+                {
+                    Console.Write(nomMeses[i] + ", ");
+                }
+                Console.WriteLine();
+
+                // 2. Arreglo con los nombres de los planetas del sistema solar
+                string[] nomPlanetas = { "mercurio", "venus", "tierra", "marte", "jupiter", "saturno", "urano", "neptuno" };
+
+                foreach (string planeta in nomPlanetas)
+                {
+                    Console.WriteLine(planeta);
+                }
+
+
+
+
+            //Practica I
+            
+                // Declarar y inicializar una matriz bidimensional de 9x9
+                int[,] matriz = {
+                {0, 3, 0, 0, 0, 0, 0, 0, 0},
+                {0, 2, 0, 9, 0, 6, 3, 0, 0},
+                {0, 6, 0, 4, 0, 2, 0, 9, 0},
+                {1, 0, 0, 0, 9, 0, 4, 0, 0},
+                {0, 0, 8, 1, 0, 3, 5, 0, 0},
+                {0, 0, 5, 0, 7, 0, 0, 0, 3},
+                {0, 5, 0, 3, 0, 1, 0, 6, 0},
+                {0, 0, 4, 6, 0, 7, 0, 3, 0},
+                {0, 0, 0, 0, 0, 0, 0, 8, 0}
+                };
+
+                for (int i = 0; i < 9; i++)
+                {
+                    for (int j = 0; j < 9; j++)
+                    {
+                        Console.Write(matriz[i, j] + " ");
+                    }
+                    Console.WriteLine();
+                }
+        }
+    }
+    }
