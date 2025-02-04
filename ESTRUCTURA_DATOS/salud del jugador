@@ -1,0 +1,28 @@
+int main()
+{
+    int salud;
+        int* puntero_a_salud = &salud;
+        cout << "dame la salud del jugador" << endl;
+        cin >> salud;
+
+
+        if (salud >= 100)
+        {
+            cout << "tu salud es alta" << endl;
+        }
+
+
+        if (salud < 100 and salud >= 50)
+        {
+            cout << "tu salud es normal" << endl;
+        }
+
+
+        if (salud < 50)
+        {
+            cout << "tu salud es critica" << endl;
+        }
+
+        cout << "La direccion de memoria de la salud es: " << &salud << endl;
+
+}
