@@ -1,0 +1,85 @@
+#include <iostream>
+#include <string>
+using namespace std;
+//Definir estructura
+
+struct Arma
+{
+    string nombre;
+    int precio;
+    int danio;
+};
+
+int main()
+{
+    //Definir armas disponibles
+    Arma armas[3] = { {"Espada oxidada", 10,5} , {"Escudo mágico", 15,2} , {"Arco élfico", 20,7} };
+    int cantidadArmas = sizeof(armas) / sizeof(Arma);
+    //Definir oro inicial
+    int oroJugador = 30;
+    int* oroActual = &oroJugador;
+
+    //Buce principal
+    while (true)
+    {
+        cout << "¡Bienvenidos a la tienda de armas!" << endl;
+        cout << "tienes: " << *oroActual << "Monedas de oro" << endl;
+        break;
+    }
+    
+
+    // mostrar armas disponibles
+    cout << "Armas disponibles: " << endl;
+    Arma* armasEnVenta = armas;
+
+    for (int i = 0; i < cantidadArmas; i++)
+    {
+        cout << i + 1 << "." << armasEnVenta[i].nombre << "Precio:" << armasEnVenta[i].precio << "Daño: " << armasEnVenta[i].danio << endl;
+    }
+    
+    
+    cout << " \nOpciones: \n";
+    cout << "1. Comprar arma\n";
+    cout << "2. Salir\n";
+        
+    cout << "Seleccione una opcion: ";
+
+    int opcion;
+    cin >> opcion;
+
+   
+   opcion;
+
+   switch (opcion) {
+   case 1: {
+       cout << "\nSeleccione el número del arma que desea comprar: ";
+       int seleccion;
+       cin >> seleccion;
+
+       if (seleccion < 1 || seleccion > cantidadArmas) {
+           cout << "Selección invalida. Intente de nuevo. \n";
+           break;
+       }
+
+       Arma armaSeleccionada = armasEnVenta[seleccion - 1];
+
+       if (*oroActual >= armaSeleccionada.precio) {
+           *oroActual -= armaSeleccionada.precio;
+           cout << "Has comprado " << armaSeleccionada.nombre << " con éxito! \n";
+       }
+       else {
+           cout << "No tienes suficiente oro para comprar esa arma. \n";
+       }
+       break;
+   }
+   case 2:
+       cout << "Gracias por visitar la tienda. ¡Hasta pronto! \n";
+       return 0;
+   default:
+       cout << "Opción invalida. Intente de nuevo. \n";
+       break;
+   }
+    
+}
+
+
