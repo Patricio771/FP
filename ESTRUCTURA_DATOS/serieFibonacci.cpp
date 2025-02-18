@@ -5,7 +5,7 @@ int fibonacci(int n);
 int main()
 {
     int nElementos;
-
+    //Pedimos un numero entero positivo
     do
     {
         cout << "Digite el numero de elementos: ";
@@ -13,6 +13,7 @@ int main()
     }
 
     while (nElementos <= 0);
+    //Mandamos llamar a la funcón pero de forma iterativa para imprimir todos los elementos
 
     cout << "Serie Finobacci: ";
     for (int i = 0; i < nElementos; i++)
@@ -21,7 +22,16 @@ int main()
     }
     return 0;
 }
-else
+
+int fibonacci(int n)
 {
-    return fibonacci(n - 1) + fibonacci(n - 2);
+    if (n < 2)
+    {
+        return n;
+    }
+    else
+    {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
 }
+
