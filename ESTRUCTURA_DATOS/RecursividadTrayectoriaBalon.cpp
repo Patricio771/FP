@@ -43,11 +43,11 @@ int main()
 	{
 		cout << "El angulo es válido" << endl;
 	}
-	
+
 	else
 	{
 		cout << "El angulo es invalido" << endl;
 	}
 
-	TrajectoryCalculation
+	TrajectoryCalculation (&posX, &posY, time + 0.1, angle, gravity, power)
 }
