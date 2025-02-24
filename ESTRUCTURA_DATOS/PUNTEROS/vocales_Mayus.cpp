@@ -3,7 +3,7 @@
 using namespace std;
 
 void pedirDatos();
-void contarVocales(char *);
+void contarVocales(char*);
 char palabraUsuario[30];
 
 int main()
@@ -24,6 +24,7 @@ void contarVocales(char* palabra)
 	{
 		switch (*palabra)
 		{
+			// tambien se pueden minusculas, solo en el char del case.
 		case 'A': contA++; break;
 		case 'E': contE++; break;
 		case 'I': contI++; break;
