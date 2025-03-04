@@ -11,8 +11,8 @@ void TrajectoryCalculation(double* posX, double* posY, double time, int power, i
 	*posX = velocityX * time;
 	*posY = velocityY * time - 0.5 * gravity * time * time;
 
-	cout << "tiempo: " << time << "S   " << "Posicion(X, Y) : (" << *posX << ", " << *posY << ") " << endl;
-	if (*posY <= 0)
+	cout << "tiempo: " << time << "S   " << "Posicion(X, Y) : (" << *posX << ", " << *posY << ") " << endl << flush;
+	if (*posY < 0.001)
 	{
 		cout << "El balon ha tocado el suelo. Fin de tiro" << endl;
 		return; // Terminar la recursividad cuando el balón toque el suelo.
@@ -24,11 +24,11 @@ void TrajectoryCalculation(double* posX, double* posY, double time, int power, i
 
 int main()
 {
-	double tiro, angulo;
+	double power, angle;
 	cout << "Dame la potencia de tiro: ";
-	cin >> tiro;
+	cin >> power;
 
-	if (tiro >= 0 && tiro <= 100)
+	if (power >= 0 && power <= 100)
 	{
 		cout << "Potencia de tiro valida" << endl;
 	}
@@ -40,9 +40,9 @@ int main()
 	}
 
 	cout << "Dame el angulo de tiro: " << endl;
-	cin >> angulo;
+	cin >> angle;
 
-	if (angulo >= 0 && angulo <= 90)
+	if (angle >= 0 && angle <= 90)
 	{
 		cout << "El angulo es válido" << endl;
 	}
@@ -57,6 +57,6 @@ int main()
 	double gravity = 9.81; //Valor de gravedad puede ser ajustado segun sea necesario.
 
 
-	TrajectoryCalculation(&posX, &posY, time, tiro, gravity, angulo);
-	return 0;
+	TrajectoryCalculation(&posX, &posY, time, power, angle, gravity);
+	
 }
