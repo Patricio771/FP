@@ -18,7 +18,7 @@ void TrajectoryCalculation(double* posX, double* posY, double time, int power, i
 		return; // Terminar la recursividad cuando el balón toque el suelo.
 	}
 
-	TrajectoryCalculation(posX, posY, time + 0.1, angle, gravity, power);
+	TrajectoryCalculation(posX, posY, time + 0.1, power, angle, gravity);
 }
 
 
