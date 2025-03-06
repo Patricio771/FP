@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 // Definición de la estructura Enemigo
@@ -28,35 +29,36 @@ void encuentro(Enemigo enemigo, Personaje personaje)
         // Turno del personaje
         enemigo.vida -= personaje.ataque;
         cout << personaje.nombre << " ataca a " << enemigo.nombre
-            << " causando " << personaje.ataque << " de daño. "
+            << " causando " << personaje.ataque << " de danio. "
             << enemigo.nombre << " ahora tiene " << (enemigo.vida > 0 ? enemigo.vida : 0) << " de vida." << endl;
 
         if (enemigo.vida <= 0)
         {
             cout << enemigo.nombre << " ha sido derrotado. ¡" << personaje.nombre << " gana el combate!" << endl;
-            return;
+            
         }
         // Turno del enemigo
         personaje.vida -= enemigo.ataque;
         cout << enemigo.nombre << " ataca a " << personaje.nombre
-            << " causando " << enemigo.ataque << " de daño. "
+            << " causando " << enemigo.ataque << " de danio. "
             << personaje.nombre << " ahora tiene " << (personaje.vida > 0 ? personaje.vida : 0) << " de vida." << endl;
 
         if (personaje.vida <= 0)
         {
             cout << personaje.nombre << " ha sido derrotado. ¡" << enemigo.nombre << " gana el combate!" << endl;
-            return;
+            
         }
+        break;
     }
 }
 
 
 // Función principal
-int main() 
+int main()
 {
     // Crear un personaje y un enemigo
-    Personaje jugador = { "Héroe", 50, 10 }; // Nombre, vida, ataque
-    Enemigo villano = { "Goblin", 30, 8 };   // Nombre, vida, ataque
+    Personaje jugador = { "Heroe", 50, 10, 6}; // Nombre, nivel, vida, ataque
+    Enemigo villano = { "Goblin", 30, 8, 3};   // Nombre, nivel, vida, ataque
 
     // Ejecutar el combate
     encuentro(villano, jugador);
