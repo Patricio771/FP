@@ -35,7 +35,7 @@ void encuentro(Enemigo enemigo, Personaje personaje)
         if (enemigo.vida <= 0)
         {
             cout << enemigo.nombre << " ha sido derrotado. ¡" << personaje.nombre << " gana el combate!" << endl;
-            
+
         }
         // Turno del enemigo
         personaje.vida -= enemigo.ataque;
@@ -46,7 +46,7 @@ void encuentro(Enemigo enemigo, Personaje personaje)
         if (personaje.vida <= 0)
         {
             cout << personaje.nombre << " ha sido derrotado. ¡" << enemigo.nombre << " gana el combate!" << endl;
-            
+
         }
         break;
     }
@@ -57,8 +57,8 @@ void encuentro(Enemigo enemigo, Personaje personaje)
 int main()
 {
     // Crear un personaje y un enemigo
-    Personaje jugador = { "Heroe", 50, 10, 6}; // Nombre, nivel, vida, ataque
-    Enemigo villano = { "Goblin", 30, 8, 3};   // Nombre, nivel, vida, ataque
+    Personaje jugador = { "Heroe", 50, 10, 4 }; // Nombre, nivel, vida, ataque
+    Enemigo villano = { "Goblin", 30, 8, 3 };   // Nombre, nivel, vida, ataque
 
     // Ejecutar el combate
     encuentro(villano, jugador);
