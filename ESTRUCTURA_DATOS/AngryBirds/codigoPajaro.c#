@@ -10,7 +10,7 @@ public class BIRD : MonoBehaviour
     private Camera mainCamera;
     private Rigidbody2D rb;
     private Vector2 startPosition, clampedPosition;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +23,7 @@ public class BIRD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnMouseDrag()
@@ -32,13 +32,13 @@ public class BIRD : MonoBehaviour
         Vector2 dragPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         clampedPosition = dragPosition;
 
-        //Calcula la distancia entre StarPosition y dragPosition
+        //Calcula la distancia entre StartPosition y dragPosition
         float dragDistance = Vector2.Distance(startPosition, dragPosition);
-        if (dragDistance <maxDistance)
+        if (dragDistance > maxDistance)
         {
             clampedPosition = startPosition + (dragPosition - startPosition).normalized * maxDistance;
         }
-        if (dragPosition.x < startPosition.x)
+        if (dragPosition.x > startPosition.x)
         {
             clampedPosition.x = startPosition.x;
         }
